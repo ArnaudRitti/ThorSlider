@@ -1,18 +1,18 @@
 {
-	"name": "jquery-boilerplate",
-	"version": "3.5.0",
-	"homepage": "http://jqueryboilerplate.com",
+	"name": "ThorSlider",
+	"version": "0.0.1",
+	"homepage": "http://arnaudritti.github.io/ThorSlider/",
 	"authors": [
-		"Zeno Rocha <hi@zenorocha.com>"
+		"Arnaud Ritti <contact@arnaud-ritti.fr>"
 	],
 	"description": "A jump-start for jQuery plugins development.",
-	"main": "src/jquery.boilerplate.js",
+	"main": "src/jquery.thorslider.js",
 	"keywords": [
 		"jquery",
 		"plugin",
-		"boilerplate",
+		"slider",
 		"jquery-plugin",
-		"jquery-boilerplate"
+		"jquery-slider"
 	],
 	"license": "MIT"
 }

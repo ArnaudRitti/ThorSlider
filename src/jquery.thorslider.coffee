@@ -8,7 +8,7 @@ do ($ = jQuery, window, document) ->
 	# minified (especially when both are regularly referenced in your plugin).
 
 	# Create the defaults once
-	pluginName = "defaultPluginName"
+	pluginName = "thorSlider"
 	defaults =
 		property: "value"
 

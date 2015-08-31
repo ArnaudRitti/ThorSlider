@@ -17,7 +17,7 @@ This project won't seek to provide a perfect solution to every possible pattern,
 2. Include plugin's code:
 
 	```html
-	<script src="dist/jquery.boilerplate.min.js"></script>
+	<script src="dist/jquery.thorslider.min.js"></script>
 	```
 
 3. Call the plugin:
@@ -36,16 +36,16 @@ The basic structure of the project is given in the following way:
 ├── demo/
 │   └── index.html
 ├── dist/
-│   ├── jquery.boilerplate.js
-│   └── jquery.boilerplate.min.js
+│   ├── jquery.thorslider.js
+│   └── jquery.thorslider.min.js
 ├── src/
-│   ├── jquery.boilerplate.coffee
-│   └── jquery.boilerplate.js
+│   ├── jquery.thorslider.coffee
+│   └── jquery.thorslider.js
 ├── .editorconfig
 ├── .gitignore
 ├── .jshintrc
 ├── .travis.yml
-├── boilerplate.jquery.json
+├── thorslider.jquery.json
 ├── Gruntfile.js
 └── package.json
 ```

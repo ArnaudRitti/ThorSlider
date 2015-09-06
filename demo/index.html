@@ -1,212 +1,88 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>jQuery Boilerplate</title>
-		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-		<script src="../src/jquery.thorslider.js"></script>
-		<style>
+<html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Vertical Showcase Slider with jQuery and CSS Transitions</title>
+      <meta name="description" content="Vertical Showcase Slider with jQuery and CSS Transitions" />
+      <meta name="keywords" content="css3, transitions, vertical, layout, fullscreen, jquery, slide up, slide down" />
+      <meta name="author" content="Codrops" />
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" type="text/css" href="css/style.css" />
+      <link href='http://fonts.googleapis.com/css?family=Dosis:200,400,700' rel='stylesheet' type='text/css'>
+      <noscript><link rel="stylesheet" type="text/css" href="css/noscript.css" /></noscript>
+      <!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="css/noscript.css" /><![endif]-->
 
-html, body{
-	background: #eee;
-	width: 100%;
-}
+			<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+			<script src="../src/jquery.thorslider.js"></script>
 
-.wrapper{
-  width:90%;
-  position:relative;
-  margin:5% auto 0;
-}
+    </head>
+    <body>
 
-/**
- * Padding is set relative to the width
- * of the element, so here padding-top:60% is
- * a percentage of the width. This allows us
- * to set the height as a ratio of the width
- *
- */
-.carousel{
-	width: 100%;
-	position: relative;
-	padding-top: 60%;
-	overflow: hidden;
-}
 
-.inner{
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	top:0;
-	left: 0;
-}
 
-/**
- * ==========================
- * Animation styles
- *
- * Notes:
- * 1. We use z-index to position active slides in-front
- * of non-active slides
- * 2. We set right:0 and left:0 on .slide to provide us with
- * a default positioning on both sides of the slide. This allows
- * us to trigger JS and CSS3 animations easily
- *
- */
-.thor-slide{
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	top:0;
-	right:0;
-	left:0;
-	z-index: 1;
-	opacity: 0;
-	text-align: center;
-	font-size: 100px;
-}
+		<section id="ts-container" class="ts-container">
 
-.thor-slide.active,
-.thor-slide.left,
-.thor-slide.right{
-	z-index: 2;
-	opacity: 1;
-}
+			<div class="ts-contentwrapper">
 
-/**
- * ==========================
- * JS animation styles
- *
- * We use jQuery.animate to control the sliding animations
- * when CSS3 animations are not available. In order for
- * the next slide to slide in from the right, we need
- * to change the left:0 property of the slide to left:auto
- *
- */
-
-.js-reset-left{left:auto}
-
-/**
- * ==========================
- * Indicators
- *
- */
-.thor-dots{
-  width:100%;
-  position: absolute;
-  bottom:0;
-  z-index: 4;
-  padding:0;
-  text-align: center;
-}
-
-.thor-dots li{
-	width: 13px;
-	height: 13px;
-	display: inline-block;
-	margin: 5px;
-	background: #0f0;
-	list-style-type: none;
-	border-radius: 50%;
-  cursor:pointer;
-  transition:background 0.3s ease-out;
-}
-
-.thor-dots li.active{background:#f00}
-
-.thor-dots li:hover{background-color:#0ff}
-
-/**
- * ==========================
- * Arrows
- *
- */
-.thor-arrows{
-  width: 20px;
-  height: 20px;
-  position:absolute;
-  top:50%;
-  z-index:5;
-  border-top:3px solid #fff;
-  border-right:3px solid #fff;
-  cursor:pointer;
-  transition:border-color 0.3s ease-out;
-	z-index: 1000;
-}
-
-.thor-arrows:hover{border-color:#93278f}
-
-.arrow-left{
-  left:20px;
-  transform:rotate(225deg);
-}
-
-.arrow-right{
-  right:20px;
-  transform:rotate(45deg);
-}
-
-/**
- * ==========================
- * For demo purposes only
- *
- * Please note that the styles below are used
- * for the purposes of this demo only. There is no need
- * to use these in any of your own projects
- *
- */
-.slide{
-	text-align:center;
-  padding-top:25%;
-  background-size:cover;
-}
-
-h1{
-	width:100px;
-  height:100px;
-  background-color:rgba(146, 45, 141,0.7);
-	margin:auto;
-  line-height:100px;
-	color:#fff;
-	font-size:2.4em;
-  border-radius:50%;
-}
-
-.slide:nth-child(1){
-	background-image:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/163697/slide-1.jpg);
- }
-
-.slide:nth-child(2){
-	background-image:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/163697/slide-2.jpg);
-}
-
-.slide:nth-child(3){
-	background-image:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/163697/slide-3.jpg);
- }
- .thor-left, .thor-right{width: 49%;height:100%;display: inline-block}
-		</style>
-	</head>
-	<body>
-		<div id="element">
-			<div class="thor-slide">
-				<div class="thor-left" style="background:red">
-					<img class="http://placekitten.com/200/300">
+				<div class="ts-content" style="background: #ff0000">
+					<h2>Bernhard</h2>
+					<p>With restful springiness in the seat; prevents static sitting and provides enhanced seating comfort. Padded seat and back for enhanced seating comfort. Soft, hardwearing and easy care leather, which ages gracefully.</p>
+					<a href="http://www.ikea.com/gb/en/catalog/products/80163804/#/60203882">Buy this item</a>
 				</div>
-				<div class="thor-right" style="background:blue">
-					<img class="http://placekitten.com/500/300">
+
+				<div class="ts-content" style="background: #fff000">
+					<h2>Tobias</h2>
+					<p>For increased stability, re-tighten the screws about two weeks after assembly. Seat and back with restful flexibility; prevents a static sitting posture and enhances comfort.</p>
+					<a href="http://www.ikea.com/gb/en/catalog/products/90185320/#/20115038">Buy this item</a>
 				</div>
-			</div>
-			<div class="thor-slide">
-				<div class="thor-left" style="background:green">
-					<img class="http://placekitten.com/500/300">
+
+				<div class="ts-content" style="background: #ffff00">
+					<h2>Pöang</h2>
+					<p>Frame made of layer-glued bent birch; a very strong and durable material. High back provides great support for your neck. Sheepskin has natural insulating properties, which make it feel warm and cosy to sit on. Extra cushions are available for variation and renewal.</p>
+					<a href="http://www.ikea.com/gb/en/catalog/products/S79889694/#/S59901017">Buy this item</a>
 				</div>
-				<div class="thor-right" style="background:orange">
-					<img class="http://placekitten.com/200/300">
+
+				<div class="ts-content" style="background: #00ffff">
+					<h2>Mellby</h2>
+					<p>Easy to keep clean; removable, machine washable cover. Seat cushion with a top layer of memory foam; moulds to the precise contours of your body and regains its shape when you get up.</p>
+					<a href="http://www.ikea.com/gb/en/catalog/products/S99895000/#/S69894380">Buy this item</a>
 				</div>
-			</div>
-		</div>
-		<script>
+
+				<div class="ts-content" style="background: #000fff">
+					<h2>Torbjörn</h2>
+					<p>Height adjustable for a comfortable sitting posture. The sloping seat gives a comfortable sitting position when leaning forwards.</p>
+					<a href="http://www.ikea.com/gb/en/catalog/products/70224756/">Buy this item</a>
+				</div>
+
+			</div><!-- /ts-contentwrapper -->
+
+			<div class="ts-slidewrapper">
+
+				<div class="ts-slides">
+					<div style="background-image:url(images/1.jpg);"></div>
+					<div style="background-image:url(images/2.jpg);"></div>
+					<div style="background-image:url(images/3.jpg);"></div>
+					<div style="background-image:url(images/4.jpg);"></div>
+					<div style="background-image:url(images/5.jpg);"></div>
+				</div>
+
+				<nav>
+					<a href="#" class="ts-prev" ></a>
+					<a href="#" class="ts-next" ></a>
+				</nav>
+
+			</div><!-- /ts-slidewrapper -->
+
+		</section><!-- /ts-container -->
+
+		<!-- jQuery if needed -->
+
+    <script>
 			$(function() {
-				$("#element").thorSlider();
+				$("#ts-container").thorSlider();
 			});
 		</script>
-	</body>
+    </body>
 </html>
